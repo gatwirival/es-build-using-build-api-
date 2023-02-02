@@ -23038,7 +23038,7 @@
               unmarkContainerAsRoot(container);
             }
           };
-          function createRoot(container, options2) {
+          function createRoot2(container, options2) {
             if (!isValidContainer(container)) {
               throw new Error("createRoot(...): Target container is not a DOM element.");
             }
@@ -23409,7 +23409,7 @@
                 error('You are importing createRoot from "react-dom" which is not supported. You should instead import it from "react-dom/client".');
               }
             }
-            return createRoot(container, options2);
+            return createRoot2(container, options2);
           }
           function hydrateRoot$1(container, initialChildren, options2) {
             {
@@ -23477,12 +23477,12 @@
   });
 
   // index.js
-  var import_react = __toESM(require_react());
-  var import_react_dom = __toESM(require_react_dom());
+  var import_react = __toESM(require_react(), 1);
+  var import_react_dom = __toESM(require_react_dom(), 1);
   function App() {
-    return /* @__PURE__ */ import_react.default.createElement("div", null, "Hello, World!");
+    return /* @__PURE__ */ import_react.default.createElement("div", null, "Hello, World OF API!");
   }
-  import_react_dom.default.render(/* @__PURE__ */ import_react.default.createElement(App, null), document.getElementById("root"));
+  (0, import_react_dom.createRoot)(document.getElementById("root")).render(/* @__PURE__ */ import_react.default.createElement(App, null));
 })();
 /*! Bundled license information:
 
